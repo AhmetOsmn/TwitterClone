@@ -1,3 +1,4 @@
-export default function Notifications() {
-  return <div>Notifications component!</div>;
-}
+const Notifications = () => {
+  return <div>Notifications</div>;
+};
+export default Notifications;

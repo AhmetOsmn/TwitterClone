@@ -7,6 +7,8 @@ import NotificationsIcon from "~/layouts/main/sidebar/icons/NotificationsIcon";
 import PremiumIcon from "~/layouts/main/sidebar/icons/PremiumIcon";
 import ProfileIcon from "~/layouts/main/sidebar/icons/ProfileIcon";
 
+import store from "~/store";
+
 export const mainMenu = [
   {
     path: "/",
@@ -66,11 +68,13 @@ export const mainMenu = [
     },
   },
   {
-    path: "/profile",
+    path: () => {
+      return `/${store.getState()?.auth?.currentAccount?.userName}`;
+    },
     title: "Profil",
     icon: {
       active: <ProfileIcon isActive={true} />,
       passive: <ProfileIcon />,
     },
-  }
+  },
 ];

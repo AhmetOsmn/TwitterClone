@@ -1,4 +1,4 @@
-import { Popover, Disclosure } from "@headlessui/react";
+import { Popover } from "@headlessui/react";
 import MoreIcon from "../../icons/MoreIcon";
 import ConnectIcon from "../../icons/ConnectIcon";
 import EarnMoneyIcon from "../../icons/EarnMoneyIcon";
@@ -7,7 +7,7 @@ import CustomDisclosure from "~/components/custom-disclosure";
 const More = () => {
   return (
     <Popover className="relative">
-      <Popover.Button className="py-[3px] block group outline-none">
+      <Popover.Button className="py-[3px] w-full text-left group outline-none">
         <div className="p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors">
           <div className="w-[26.25px] h-[26.25px] relative">
             <MoreIcon />
@@ -28,6 +28,8 @@ const More = () => {
           </div>
           <div className="pr-4 text-xl font-bold">Para kazanma</div>
         </button>
+
+        <div className="h-px bg-[#2f3336] my-0.5 w-[89%] mx-auto" />
 
         <CustomDisclosure
           title="İçerik Üreticisi Stüdyosu"
