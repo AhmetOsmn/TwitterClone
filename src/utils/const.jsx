@@ -78,3 +78,45 @@ export const mainMenu = [
     },
   },
 ];
+
+export const topics = [
+  {
+    title: "Türkiye tarihinde dündemde",
+    topic: {
+      type: "tag",
+      value: "reactjs",
+    },
+  },
+  {
+    title: "Türkiye tarihinde dündemde",
+    topic: {
+      type: "query",
+      value: "starlink",
+    },
+    postCount: 122
+  },
+  {
+    title: "Türkiye tarihinde dündemde",
+    topic: {
+      type: "query",
+      value: "elon musk",
+    },
+    postCount: 321452
+  },
+  {
+    title: "Türkiye tarihinde dündemde",
+    topic: {
+      type: "query",
+      value: "twitter",
+    },
+    postCount: 346324
+  },
+  {
+    title: "Türkiye tarihinde dündemde",
+    topic: {
+      type: "query",
+      value: "Galatasaray",
+    },
+    postCount: 1523423
+  },
+];
