@@ -1,6 +1,8 @@
+import Footer from "./footer";
 import Premium from "./premium";
 import Search from "./search";
 import Topics from "./topics";
+import WhoFallow from "./who-fallow";
 
 const Rightbar = () => {
   return (
@@ -8,6 +10,8 @@ const Rightbar = () => {
       <Search />
       <Premium />
       <Topics />
+      <WhoFallow />
+      <Footer />
     </aside>
   );
 };
