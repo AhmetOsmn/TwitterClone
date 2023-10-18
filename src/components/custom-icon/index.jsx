@@ -1,8 +1,8 @@
 const CustomIcon = ({ isActive = false, dActive = "", dPassive = "" }) => {
   const path = isActive ? (
-    <path fill="#fff" d={dActive} />
+    <path fill="currentColor" d={dActive} />
   ) : (
-    <path fill="#e7e9ea" d={dPassive} />
+    <path fill="currentColor" d={dPassive} />
   );
 
   return (

@@ -1,5 +1,5 @@
 import { Popover, Transition } from "@headlessui/react";
-import { useAccount } from "~/store/auth/hook";
+import { useAccount } from "~/store/auth/hooks";
 import More from "./more";
 
 const Account = () => {
@@ -12,13 +12,13 @@ const Account = () => {
           <img src={account.avatar} alt="" className="2-10 h-10 rounded-full" />
           <div className="mx-3 text-[15px]">
             <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
-            <div className="text-[#71767b] leading-[20px]">
+            <div className="text-[color:var(--color-base-secondary)] leading-[20px]">
               @{account.userName}
             </div>
           </div>
           <svg
             viewBox="0 0 24 24"
-            className="ml-auto text-[#e7e9ea]"
+            className="ml-auto"
             width={18.75}
           >
             <path
@@ -35,7 +35,7 @@ const Account = () => {
           leaveFrom="transform opacity-100"
           leaveTo="transform opacity-0"
         >
-          <Popover.Panel className="absolute bottom-[80px] overflow-hidden py-3 w-[300px] left-1/2 -translate-x-1/2 bg-black rounded-2xl shadow-box">
+          <Popover.Panel className="absolute bottom-[80px] overflow-hidden py-3 w-[300px] left-1/2 -translate-x-1/2 bg-[color:var(--background-primary)] rounded-2xl shadow-box">
             {({ close }) => <More close={close} />}
           </Popover.Panel>
         </Transition>

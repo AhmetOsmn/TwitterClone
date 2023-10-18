@@ -8,28 +8,28 @@ const More = () => {
   return (
     <Popover className="relative">
       <Popover.Button className="py-[3px] w-full text-left group outline-none">
-        <div className="p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[#eff3f41a] transition-colors">
+        <div className="p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[color:var(--background-third)] transition-colors">
           <div className="w-[26.25px] h-[26.25px] relative">
             <MoreIcon />
           </div>
           <div className="pr-4 text-xl">Daha fazla</div>
         </div>
       </Popover.Button>
-      <Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-black shadow-box rounded-xl overflow-hidden">
-        <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[#eff3f41a] transition-colors">
+      <Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden">
+        <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[color:var(--background-secondary)] transition-colors">
           <div className="w-[26.25px] h-[26.25px] relative">
             <ConnectIcon />
           </div>
           <div className="pr-4 text-xl font-bold">Bağlan</div>
         </button>
-        <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[#eff3f41a] transition-colors">
+        <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[color:var(--background-secondary)] transition-colors">
           <div className="w-[26.25px] h-[26.25px] relative">
             <EarnMoneyIcon />
           </div>
           <div className="pr-4 text-xl font-bold">Para kazanma</div>
         </button>
 
-        <div className="h-px bg-[#2f3336] my-0.5 w-[89%] mx-auto" />
+        <div className="h-px bg-[color:var(--background-third)] my-0.5 w-[89%] mx-auto" />
 
         <CustomDisclosure
           title="İçerik Üreticisi Stüdyosu"
@@ -68,6 +68,7 @@ const More = () => {
               path: "/",
               svgD: "M20 12h2v6.5c0 1.38-1.12 2.5-2.5 2.5h-15C3.12 21 2 19.88 2 18.5v-13C2 4.12 3.12 3 4.5 3H11v2H4.5c-.28 0-.5.22-.5.5v13c0 .28.22.5.5.5h15c.27 0 .5-.22.5-.5V12zm2.31-6.78l-6.33 7.18c-.2 2.02-1.91 3.6-3.98 3.6H8v-4c0-2.07 1.58-3.78 3.6-3.98l7.18-6.33c.99-.88 2.49-.83 3.43.1.93.94.98 2.44.1 3.43zm-1.52-2.01c-.19-.19-.49-.2-.69-.02l-6.08 5.36c.59.35 1.08.84 1.43 1.43l5.36-6.08c.18-.2.17-.5-.02-.69z",
               title: "Görünüm",
+              isAppearance: true
             },
             {
               path: "/",

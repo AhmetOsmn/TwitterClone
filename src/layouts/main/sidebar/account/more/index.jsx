@@ -1,6 +1,6 @@
 import classNames from "classnames";
-import { setCurrentAccount } from "~/store/auth/action";
-import { useAccount, useAccounts } from "~/store/auth/hook";
+import { setCurrentAccount } from "~/store/auth/actions";
+import { useAccount, useAccounts } from "~/store/auth/hooks";
 
 const More = ({ close }) => {
   const currentAccount = useAccount();
@@ -26,7 +26,7 @@ const More = ({ close }) => {
           <img src={account.avatar} alt="" className="2-10 h-10 rounded-full" />
           <div className="mx-3 flex-1 text-[15px]">
             <h6 className="font-bold leading-[20px]">{account.fullName}</h6>
-            <div className="text-[#71767b] leading-[20px]">
+            <div className="text-[color:var(--color-base-secondary)] leading-[20px]">
               @{account.userName}
             </div>
           </div>
@@ -46,13 +46,13 @@ const More = ({ close }) => {
 
       <div className="h-px bg-[#2f3336] my-3" />
 
-      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[#e7e9ea] text-[15px] font-bold">
+      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[15px] font-bold">
         Var olan bir hesap ekle
       </button>
-      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[#e7e9ea] text-[15px] font-bold">
+      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[15px] font-bold">
         Hesapları yönet
       </button>
-      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[#e7e9ea] text-[15px] font-bold">
+      <button className="py-3 px-4 text-left transation-colors hover:bg-[#eff3f41a] w-full leading-[20px] text-[15px] font-bold">
         <div className="max-w-[228px]">
           @{currentAccount.userName} hesabından çıkış yap
         </div>

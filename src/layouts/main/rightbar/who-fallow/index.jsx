@@ -2,7 +2,7 @@ import Button from "~/components/button";
 import SidebarSection from "~/components/sidebar-section";
 import UserCard from "~/components/user-card";
 import { whoFallowUsers } from "~/mock";
-import { useAccount } from "~/store/auth/hook";
+import { useAccount } from "~/store/auth/hooks";
 
 const WhoFallow = () => {
   const account = useAccount();

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../button";
 
 const UserCard = ({ user }) => {
-  const [fallowing, setFallowing] = useState(false);
+  const [following, setFollowing] = useState(false);
 
   return (
     <button className="py-3 px-4 flex gap-3 hover:bg-white/[0.03] transition-colors">
@@ -12,7 +12,7 @@ const UserCard = ({ user }) => {
         className="w-10 h-10 rounded-full object-cover"
       />
       <div className="flex-1 max-w-full flex flex-col text-left">
-        <div className="text-[15px] text-[#e7e9ea] leading-5 font-bold flex items-center">
+        <div className="text-[15px] leading-5 font-bold flex items-center">
           {user.fullName}
           {user?.verified && (
             <svg
@@ -28,14 +28,14 @@ const UserCard = ({ user }) => {
             </svg>
           )}
         </div>
-        <div className="text-[15px] text-[#71767b]">{user.userName}</div>
+        <div className="text-[15px] text-[color:var(--color-base-secondary)]">{user.userName}</div>
       </div>
       <div>
-        {fallowing ? (
+        {following ? (
           <Button
             variant="white-outline"
             size="small"
-            onClick={() => setFallowing(false)}
+            onClick={() => setFollowing(false)}
             className="whitespace-nowrap group"
           >
             <div className="flex group-hover:hidden">Takip Ediliyor</div>
@@ -45,7 +45,7 @@ const UserCard = ({ user }) => {
           <Button
             variant="white"
             size="small"
-            onClick={() => setFallowing(true)}
+            onClick={() => setFollowing(true)}
           >
             Takip Et
           </Button>

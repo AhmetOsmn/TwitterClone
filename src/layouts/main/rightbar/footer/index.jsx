@@ -6,43 +6,43 @@ const Footer = () => {
     <footer className="mb-4 px-4 flex flex-wrap gap-2">
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Hizmet Şartları
       </Link>
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Gizlilik Politikası
       </Link>
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Çerez Politikası
       </Link>
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Imprint
       </Link>
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Erişilebilirlik
       </Link>
       <Link
         to="/"
-        className="text-[#71767b] leading-4 text-[13px] hover:underline"
+        className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline"
       >
         Reklam bilgisi
       </Link>
       <div className="w-full flex gap-2">
         <Popover className="relative leading-4 inline-flex">
-          <Popover.Button className="text-[#71767b] leading-4 text-[13px] hover:underline outline-none inline-flex items-center">
+          <Popover.Button className="text-[color:var(--color-base-secondary)] leading-4 text-[13px] hover:underline outline-none inline-flex items-center">
             Daha fazla
             <svg viewBox="0 0 24 24" className="h-[1em] px-0.5">
               <path
@@ -51,40 +51,40 @@ const Footer = () => {
               />
             </svg>
           </Popover.Button>
-          <Popover.Panel className="w-[150px] max-w-[384px] grid bg-black shadow-box rounded-xl absolute bottom-0 right-0 overflow-hidden">
+          <Popover.Panel className="w-[150px] max-w-[384px] grid bg-[color:var(--background-primary)] shadow-box rounded-xl absolute bottom-0 right-0 overflow-hidden">
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[#16181c] transition-colors"
+              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:[color:var(--background-secondary)] transition-colors"
             >
               Hakkında
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[#16181c] transition-colors"
+              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               X uygulamasını indir
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[#16181c] transition-colors"
+              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               Durum
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[#16181c] transition-colors"
+              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               İşletmeler için X
             </Link>
             <Link
               to="/"
-              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[#16181c] transition-colors"
+              className="py-3 px-4 text-white text-[15px] leading-5 font-bold hover:bg-[color:var(--background-secondary)] transition-colors"
             >
               Geliştiriciler
             </Link>
           </Popover.Panel>
         </Popover>
-        <p className="text-[#71767b] leading-4 text-[13px]" >&copy; 2023 X Corp.</p>
+        <p className="text-[color:var(--color-base-secondary)] leading-4 text-[13px]" >&copy; 2023 X Corp.</p>
       </div>
     </footer>
   );
