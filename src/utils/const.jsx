@@ -93,7 +93,7 @@ export const topics = [
       type: "query",
       value: "starlink",
     },
-    postCount: 122
+    postCount: 122,
   },
   {
     title: "Türkiye tarihinde dündemde",
@@ -101,7 +101,7 @@ export const topics = [
       type: "query",
       value: "elon musk",
     },
-    postCount: 321452
+    postCount: 321452,
   },
   {
     title: "Türkiye tarihinde dündemde",
@@ -109,7 +109,7 @@ export const topics = [
       type: "query",
       value: "twitter",
     },
-    postCount: 346324
+    postCount: 346324,
   },
   {
     title: "Türkiye tarihinde dündemde",
@@ -117,6 +117,34 @@ export const topics = [
       type: "query",
       value: "Galatasaray",
     },
-    postCount: 1523423
+    postCount: 1523423,
   },
 ];
+
+export const colors = [
+	{
+		primary: '#1d9bf0',
+		secondary: '#8ecdf8'
+	},
+	{
+		primary: '#ffd400',
+		secondary: '#ffea80'
+	},
+	{
+		primary: '#f91880',
+		secondary: '#fc8cc0'
+	},
+	{
+		primary: '#7856ff',
+		secondary: '#bcabff'
+	},
+	{
+		primary: '#ff7a00',
+		secondary: '#ffbd80'
+	},
+	{
+		primary: '#00ba7c',
+		secondary: '#80ddbe'
+	}
+]
+
