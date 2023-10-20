@@ -15,7 +15,7 @@ const UserCard = ({ user }) => {
         <div className="w-[calc(100%-3.25rem)] text-left">
           <div className="leading-5 font-bold truncate">{user.fullName}</div>
           <div className="text-[color:var(--color-base-secondary)] truncate">
-            @{user.username}
+            @{user.userName}
           </div>
         </div>
       </div>

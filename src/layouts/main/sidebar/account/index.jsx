@@ -17,7 +17,7 @@ const Account = () => {
           <div className="mx-3">
             <h6 className="font-bold leading-[1.25rem]">{account.fullName}</h6>
             <div className="text-[color:var(--color-base-secondary)]">
-              @{account.username}
+              @{account.userName}
             </div>
           </div>
           <svg viewBox="0 0 24 24" className="ml-auto h-[1.172rem]">

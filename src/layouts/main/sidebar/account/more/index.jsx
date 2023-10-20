@@ -28,7 +28,7 @@ const More = ({ close }) => {
           <div className="mx-3 flex-1">
             <h6 className="font-bold leading-[1.25rem]">{account.fullName}</h6>
             <div className="text-[color:var(--color-base-secondary)]">
-              @{account.username}
+              @{account.userName}
             </div>
           </div>
           {currentAccount.id === account.id && (
@@ -51,7 +51,7 @@ const More = ({ close }) => {
       </button>
       <button className="py-3 px-4 text-left transition-colors hover:bg-[color:var(--background-secondary)] w-full font-bold leading-[1.25rem]">
         <div className="max-w-[228px]">
-          @{currentAccount.username} hesabından çıkış yap
+          @{currentAccount.userName} hesabından çıkış yap
         </div>
       </button>
     </>
