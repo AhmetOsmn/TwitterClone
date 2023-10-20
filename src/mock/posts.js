@@ -1,13 +1,10 @@
 export const posts = [
   {
-    id: "1708707876628476134",
+    id: "1708707876628476134",    
     type: "photo",
     content: `OpenAI's latest DALL-E 3 model is officially available free to try on Bing. The quality is insane, comparable to Midjourney. This prompt is going viral- mimicking a creepy iPhone capture that looks insanely realistic. Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7aKxHhaAAAnHlS?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaW0AAyXEr?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -68,6 +65,7 @@ Bu anket ders esnasında sorulmuştur.`,
     content: `Toplu günaydın, ben her sabah spora devam ama her gün post atmıyorum artık, max 4 günde bir atarım çünkü en fazla 4 foto paylaşılıyormuş 🤣`,
     photos: [
       "https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large",
+      "https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -88,6 +86,7 @@ Bu anket ders esnasında sorulmuştur.`,
     content: `Imagination Land!`,
     photos: [
       "https://pbs.twimg.com/media/F7ZIK8KWgAAP8pH?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/F7VBIvZXEAAIpEM?format=jpg&name=large",
       "https://pbs.twimg.com/media/F7VBIvZXEAAIpEM?format=jpg&name=large",
     ],
     account: {
@@ -128,6 +127,7 @@ Bu anket ders esnasında sorulmuştur.`,
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
+      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
       "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {

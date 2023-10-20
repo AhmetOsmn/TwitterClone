@@ -8,8 +8,9 @@ const More = ({ close }) => {
 
   return (
     <>
-      {accounts.map((account) => (
+      {accounts.map((account,index) => (
         <button
+        key={index}
           type="button"
           disabled={currentAccount.id === account.id}
           onClick={() => {

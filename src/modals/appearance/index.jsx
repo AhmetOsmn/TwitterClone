@@ -85,6 +85,7 @@ const AppearanceModal = ({ close }) => {
                 <div className="flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]">
                   {fontSizes.map((fs, index) => (
                     <button
+                    key={index}
                       type="button"
                       onClick={(e) => {
                         setFontSize(fs);
