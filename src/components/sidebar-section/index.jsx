@@ -11,7 +11,7 @@ const SidebarSection = ({ title, children, more }) => {
       {more && (
         <Link
           to={more}
-          className="h-[52px] flex rounded-b-2xl items-center px-4 text-[15px] text-[color:var(--color-primary)] hover:bg-white/[0.03] transition-colors"
+          className="h-[3.25rem] flex rounded-b-2xl items-center px-4 text-[color:var(--color-primary)] hover:bg-[color:var(--background-third)] transition-colors"
         >
           Daha fazla göster
         </Link>

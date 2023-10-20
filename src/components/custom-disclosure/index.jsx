@@ -8,15 +8,13 @@ const CustomDisclosure = ({ title, content = [] }) => {
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className="h-[52px] flex items-center justify-between w-full px-4 font-bold hover:bg-[color:var(--background-secondary)] transation-colors">
+          <Disclosure.Button className="flex items-center justify-between w-full p-4 font-bold hover:bg-[color:var(--background-secondary)] transation-colors">
             {title}
             <svg
-              className={classNames({
+              className={classNames("h-[1.172rem]", {
                 "rotate-180 text-[color:var(--color-primary)]": open,
               })}
               viewBox="0 0 24 24"
-              width={18.75}
-              height={18.75}
             >
               <path
                 fill="currentColor"
@@ -31,9 +29,9 @@ const CustomDisclosure = ({ title, content = [] }) => {
                   key={index}
                   to={item.path}
                   onClick={() => setModal("appearance")}
-                  className="flex items-center px-3 h-11 w-full gap-3 text-[15px] font-medium hover:bg-[color:var(--background-secondary)] transation-colors"
+                  className="flex items-center px-3 h-11 w-full gap-3 font-medium hover:bg-[color:var(--background-secondary)] transation-colors"
                 >
-                  <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+                  <svg viewBox="0 0 24 24" className="h-[1.172rem]">
                     <path fill="currentColor" d={item.svgD} />
                   </svg>
                   {item.title}

@@ -6,7 +6,7 @@ const CustomIcon = ({ isActive = false, dActive = "", dPassive = "" }) => {
   );
 
   return (
-    <svg viewBox="0 0 24 24" width={26.25} height={26.25} className="block">
+    <svg viewBox="0 0 24 24" className="block h-[1.641rem]">
       {path}
     </svg>
   );

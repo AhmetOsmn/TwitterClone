@@ -1,20 +1,32 @@
+import classNames from "classnames";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AppearanceBackgroundCard from "~/components/appearance-background-card";
 import Button from "~/components/button";
-import { setColor } from "~/store/appearance/actions";
+import { setColor, setFontSize } from "~/store/appearance/actions";
 import { useAppearance } from "~/store/appearance/hooks";
-import { colors } from "~/utils/const";
+import { colors, fontSizes } from "~/utils/const";
 
 const AppearanceModal = ({ close }) => {
-  const { color } = useAppearance();
+  const { color, fontSize } = useAppearance();
+
+  const [fontSizePercent, setFontSizePercent] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFontSizePercent(
+        document.querySelector(".active-font-size").offsetLeft + 3
+      );
+    }, 1);
+  }, [fontSize]);
 
   return (
     <div className="w-[600px]">
-      <h3 className="mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center">
+      <h3 className="mt-8 mb-3 text-[1.438rem] leading-7 font-extrabold text-center">
         Görünümü özelleştir
       </h3>
       <div className="p-8 pt-0">
-        <p className="text-center text-[color:var(--color-base-secondary)] leading-5 text-[15px] mb-5">
+        <p className="text-center text-[color:var(--color-base-secondary)] leading-5 text-[0.938rem] mb-5">
           Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
         </p>
         <div className="mx-8 mb-4">
@@ -25,7 +37,7 @@ const AppearanceModal = ({ close }) => {
               alt=""
             />
             <div className="flex-1 flex flex-col">
-              <header className="mb-0.5 leading-5 text-[15px] flex items-center">
+              <header className="mb-0.5 leading-5 flex items-center">
                 <div className="font-bold flex items-center">
                   X
                   <svg
@@ -42,7 +54,7 @@ const AppearanceModal = ({ close }) => {
                   @X · 27d
                 </div>
               </header>
-              <div className="text-[color:var(--color-base)] text-[15px] leading-5">
+              <div className="text-[color:var(--color-base)] leading-5">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
                 etiketler ve{" "}
@@ -64,9 +76,38 @@ const AppearanceModal = ({ close }) => {
               Yazı tipi boyutu
             </h6>
             <div className="bg-[color:var(--background-secondary)] p-4 mb-3 rounded-2xl flex items-center gap-5 ">
-              <div className="text-[13px]">Aa</div>
-              <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full"></div>
-              <div className="text-[20px]">Aa</div>
+              <div className="text-[0.813rem]">Aa</div>
+              <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full relative">
+                <div
+                  style={{ width: fontSizePercent }}
+                  className="absolute h-full top-0 left-0 rounded-full bg-[color:var(--color-primary)]"
+                />
+                <div className="flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]">
+                  {fontSizes.map((fs, index) => (
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        setFontSize(fs);
+                      }}
+                      className={classNames(
+                        "before:absolute before:inset-0 before:rounded-full before:hover:bg-[color:var(--color-primary)] before:opacity-10 w-8 h-8 rounded-full flex items-center justify-center relative",
+                        { "active-font-size": fs === fontSize }
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          "w-3 h-3 rounded-full bg-[color:var(--color-secondary)]",
+                          {
+                            "w-4 h-4": fs === fontSize,
+                            "!bg-[color:var(--color-primary)]": fs <= fontSize,
+                          }
+                        )}
+                      ></div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="text-[1.25rem]">Aa</div>
             </div>
           </section>
 
@@ -85,7 +126,7 @@ const AppearanceModal = ({ close }) => {
                     });
                   }}
                   style={{ "--bg": c.primary }}
-                  className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+                  className="w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
                 >
                   {color.primary === c.primary && (
                     <svg viewBox="0 0 24 24" width={25}>
@@ -175,7 +216,7 @@ const AppearanceModal = ({ close }) => {
           </section>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center pt-4">
           <Button onClick={close}>Bitti</Button>
         </div>
       </div>

@@ -9,7 +9,7 @@ const More = () => {
     <Popover className="relative">
       <Popover.Button className="py-[3px] w-full text-left group outline-none">
         <div className="p-3 rounded-full inline-flex items-center gap-5 group-hover:bg-[color:var(--background-third)] transition-colors">
-          <div className="w-[26.25px] h-[26.25px] relative">
+          <div className="w-[1.641rem] h-[1.641rem] relative">
             <MoreIcon />
           </div>
           <div className="pr-4 text-xl">Daha fazla</div>
@@ -17,13 +17,13 @@ const More = () => {
       </Popover.Button>
       <Popover.Panel className="w-[318px] absolute bottom-0 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden">
         <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[color:var(--background-secondary)] transition-colors">
-          <div className="w-[26.25px] h-[26.25px] relative">
+          <div className="w-[1.641rem] h-[1.641rem] relative">
             <ConnectIcon />
           </div>
           <div className="pr-4 text-xl font-bold">Bağlan</div>
         </button>
         <button className="h-14 w-full px-4 inline-flex items-center gap-5 hover:bg-[color:var(--background-secondary)] transition-colors">
-          <div className="w-[26.25px] h-[26.25px] relative">
+          <div className="w-[1.641rem] h-[1.641rem] relative">
             <EarnMoneyIcon />
           </div>
           <div className="pr-4 text-xl font-bold">Para kazanma</div>

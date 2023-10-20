@@ -30,13 +30,13 @@ const AppearanceBackgroundCard = ({
         setBackgroundColor(backgroundColors);
         setBoxShadow(boxShadow);
       }}
-      className={`h-16 pr-3 pl-2 border font-bold border-white/10 rounded group flex items-center gap-1.5 ${buttonClassName}`}
+      className={`h-[62px] pr-3 pl-2 border font-bold border-white/10 rounded group flex items-center gap-1.5 ${buttonClassName}`}
     >
       <div
-        className={`w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center ${firstDivClassName}`}
+        className={`w-[40px] h-[40px] rounded-full flex-shrink-0 flex items-center justify-center ${firstDivClassName}`}
       >
         <div
-          className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${secondDivClassName}`}
+          className={`w-[20px] h-[20px] rounded-full border-[2px] flex items-center justify-center ${secondDivClassName}`}
         >
           {theme === backgroundColor.name && (
             <svg viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ const AppearanceBackgroundCard = ({
           )}
         </div>
       </div>
-      {title}
+      <div className="truncate">{title}</div>
     </button>
   );
 };
